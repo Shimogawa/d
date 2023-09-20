@@ -1,0 +1,26 @@
+[Defines]
+    INF_VERSION = 0x00010006
+    BASE_NAME = TestBoot
+    FILE_GUID = d7bacba3-029e-416b-92d3-32e3e02a1502
+    MODULE_TYPE = UEFI_APPLICATION
+    VERSION_STRING = 1.0
+    ENTRY_POINT = uefi_main
+
+[Sources]
+    anim.c
+    bmp.c
+    error.c
+    file.c
+    mem.c
+    protocol.c
+    render.c
+    test_boot.c
+
+[Packages]
+    MdePkg/MdePkg.dec
+
+[LibraryClasses]
+    UefiApplicationEntryPoint
+    UefiLib
+[Guids]
+    gEfiFileInfoGuid
